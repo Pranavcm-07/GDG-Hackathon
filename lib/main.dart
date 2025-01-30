@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'screens/signin_screen.dart';
 import 'package:flutter/material.dart';
+import 'screens/upload_screen.dart';
+
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,7 +30,10 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const SignInScreen(),
+      home: const UploadScreen(),
+      routes: {
+        '/upload': (context) => const UploadScreen(), // Define route for the upload screen
+      },
     );
   }
 }
